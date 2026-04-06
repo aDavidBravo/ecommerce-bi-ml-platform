@@ -1,0 +1,297 @@
+# ==========================================
+# PYTHON
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# IPython
+profile_default/
+ipython_config.py
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# ==========================================
+# DATA FILES
+# ==========================================
+*.csv
+*.parquet
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.db
+*.sqlite
+*.sqlite3
+
+# Exclude sample/test data
+!data/sample_datasets/*.csv
+!data/sample_datasets/*.parquet
+
+# Large files
+*.zip
+*.tar.gz
+*.7z
+
+# ==========================================
+# ML MODELS & ARTIFACTS
+# ==========================================
+models/
+*.h5
+*.pb
+*.onnx
+*.pth
+*.pt
+*.joblib
+mlruns/
+mlartifacts/
+
+# ==========================================
+# LOGS
+# ==========================================
+*.log
+logs/
+*.log.*
+*.out
+
+# ==========================================
+# CREDENTIALS & SECRETS
+# ==========================================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.crt
+*.p12
+credentials.json
+service-account.json
+*-credentials.json
+secrets/
+config/prod/
+config/production/
+
+# AWS
+.aws/
+
+# GCP
+*.json
+!package*.json
+!tsconfig.json
+
+# ==========================================
+# AIRFLOW
+# ==========================================
+airflow.cfg
+airflow.db
+airflow-webserver.pid
+airflow_logs/
+standalone_admin_password.txt
+
+# ==========================================
+# DOCKER
+# ==========================================
+.dockerignore
+
+# ==========================================
+# IDE & EDITORS
+# ==========================================
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ==========================================
+# OS FILES
+# ==========================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+
+# ==========================================
+# TERRAFORM
+# ==========================================
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+.terraformrc
+terraform.rc
+
+# ==========================================
+# KUBERNETES
+# ==========================================
+*.kubeconfig
+kube-config
+
+# ==========================================
+# SPARK
+# ==========================================
+spark-warehouse/
+metastore_db/
+derby.log
+
+# ==========================================
+# DBT
+# ==========================================
+dbt_packages/
+target/
+dbt_modules/
+logs/
+
+# ==========================================
+# SCALA & SBT
+# ==========================================
+*.class
+*.log
+target/
+project/target/
+project/project/
+.bsp/
+
+# ==========================================
+# R
+# ==========================================
+.Rhistory
+.RData
+.Rproj.user
+
+# ==========================================
+# TEMPORARY FILES
+# ==========================================
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# ==========================================
+# POWER BI
+# ==========================================
+# Keep .pbix files but ignore temp files
+*.pbit~RF*.mez
+
+# ==========================================
+# TABLEAU
+# ==========================================
+*.twb~
+*.twbx~
+
+# ==========================================
+# NODE MODULES (if using any JS tools)
+# ==========================================
+node_modules/
+package-lock.json
+yarn.lock
+
+# ==========================================
+# CACHE DIRECTORIES
+# ==========================================
+.cache/
+*.cache
+
+# ==========================================
+# MONITORING DATA
+# ==========================================
+prometheus_data/
+grafana_data/
+metabase_data/
+
+# ==========================================
+# CUSTOM EXCLUSIONS
+# ==========================================
+# Add your custom patterns here
+scratch/
+playground/
+experiments/
+_archive/
