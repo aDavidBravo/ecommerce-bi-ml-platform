@@ -1,0 +1,24 @@
+FROM python:3.9-slim
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Python packages
+RUN pip install --no-cache-dir \
+    mlflow==2.5.0 \
+    psycopg2-binary==2.9.6 \
+    boto3==1.28.17 \
+    azure-storage-blob==12.17.0 \
+    google-cloud-storage==2.10.0
+
+# Create directories
+RUN mkdir -p /mlflow/artifacts
+
+# Expose port
+EXPOSE 5000
+
+# Default command will be overridden by docker-compose
+CMD ["mlflow", "server", "--host", "0.0.0.0", "--port", "5000"]
