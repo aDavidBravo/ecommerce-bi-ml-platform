@@ -1,4 +1,4 @@
-# 🚀 E-Commerce Business Intelligence & Machine Learning Platform
+# 🚀 E-Commerce AI Business Intelligence & Machine Learning Platform
 
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
 [![Scala](https://img.shields.io/badge/Scala-2.13-red.svg)](https://www.scala-lang.org/)
@@ -8,7 +8,7 @@
 
 ## 📋 Descripción del Proyecto
 
-Plataforma empresarial completa de Business Intelligence y Machine Learning para análisis avanzado de e-commerce multinacional. Este proyecto integra el stack completo de tecnologías modernas de Data Science, incluyendo procesamiento distribuido, aprendizaje automático, deep learning, orquestación de pipelines, y visualización avanzada de datos.
+Plataforma empresarial completa con IA Business Intelligence y Machine Learning para análisis avanzado de e-commerce multinacional. Este proyecto integra el stack completo de tecnologías modernas de Data Science, incluyendo procesamiento distribuido, aprendizaje automático, deep learning, orquestación de pipelines, y visualización avanzada de datos.
 
 ### 🎯 Objetivos del Negocio
 
