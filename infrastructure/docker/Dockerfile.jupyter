@@ -1,0 +1,33 @@
+FROM jupyter/scipy-notebook:python-3.9
+
+USER root
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    git \
+    vim \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+USER $NB_UID
+
+# Install additional Python packages
+COPY requirements.txt /tmp/
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
+
+# Install Jupyter extensions
+RUN pip install --no-cache-dir \
+    jupyter-dash \
+    jupyterlab-git \
+    jupyterlab-execute-time \
+    jupyterlab_code_formatter \
+    black \
+    isort
+
+# Enable extensions
+RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager
+
+WORKDIR /home/jovyan/work
+
+EXPOSE 8888
