@@ -6,7 +6,7 @@
 
 ```bash
 # 1. Clonar repositorio
-git clone https://github.com/TU-USUARIO/ecommerce-bi-ml-platform.git
+git clone https://github.com/aDavidBravo/ecommerce-bi-ml-platform.git
 cd ecommerce-bi-ml-platform
 
 # 2. Configurar variables de entorno
@@ -91,104 +91,6 @@ python src/python/machine_learning/segmentation/customer_clustering.py
 - **Streamlit**: http://localhost:8501
 - **MLflow**: http://localhost:5000
 - **Power BI**: Abrir archivos .pbix en `dashboards/powerbi/`
-
-## Estructura de Datos
-
-### Base de Datos PostgreSQL
-
-```sql
--- Ver tablas disponibles
-\dt dwh.*;
-
--- Ver datos de ejemplo
-SELECT * FROM dwh.fact_sales LIMIT 10;
-SELECT * FROM dwh.dim_customer LIMIT 10;
-```
-
-### Conectar a Snowflake/Redshift
-
-Editar `.env`:
-
-```bash
-# Snowflake
-SNOWFLAKE_ACCOUNT=tu-cuenta
-SNOWFLAKE_USER=tu-usuario
-SNOWFLAKE_PASSWORD=tu-password
-
-# O Redshift
-REDSHIFT_HOST=tu-cluster.redshift.amazonaws.com
-REDSHIFT_USER=admin
-REDSHIFT_PASSWORD=tu-password
-```
-
-## Troubleshooting
-
-### Puerto ya en uso
-
-```bash
-# Cambiar puertos en docker-compose.yml
-# Ejemplo: cambiar Airflow de 8081 a 8082
-ports:
-  - "8082:8080"
-```
-
-### Error de memoria en Spark
-
-```bash
-# Aumentar memoria en docker-compose.yml
-environment:
-  - SPARK_WORKER_MEMORY=4G
-  - SPARK_EXECUTOR_MEMORY=2G
-```
-
-### Permisos de base de datos
-
-```bash
-# Recrear volúmenes
-docker-compose down -v
-docker-compose up -d
-```
-
-## Desarrollo
-
-### Ejecutar Tests
-
-```bash
-# Tests unitarios
-pytest tests/unit/
-
-# Tests de integración
-pytest tests/integration/
-
-# Coverage
-pytest --cov=src --cov-report=html
-```
-
-### Agregar Nuevos Modelos ML
-
-1. Crear módulo en `src/python/machine_learning/`
-2. Agregar dependencias a `requirements.txt`
-3. Integrar con MLflow para tracking
-4. Actualizar DAG de Airflow
-
-### Modificar Data Warehouse
-
-1. Editar schemas en `src/sql/ddl/`
-2. Crear migration scripts
-3. Ejecutar desde Airflow o manualmente
-
-## Recursos Útiles
-
-- **Documentación Completa**: Ver `docs/`
-- **Power BI Guía**: `dashboards/powerbi/POWER_BI_GUIDE.md`
-- **Ejemplos de Notebooks**: `notebooks/`
-- **Scripts Útiles**: `scripts/`
-
-## Soporte
-
-- Issues: https://github.com/TU-USUARIO/ecommerce-bi-ml-platform/issues
-- Email: support@tu-empresa.com
-- Slack: #data-platform
 
 ## Próximos Pasos
 
